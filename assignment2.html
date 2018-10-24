@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fruit Order</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12" id="header-container">
+                    <h1>Fruit Order</h1>
+                </div>
+            </div>
+            <div>
+                <form action="index.php" method="post">
+                    <div class="namefield">
+                        <div class="username">
+                            <label for="username">Username:</label>
+                        <input type="text" id="username-field" name="username" placeholder="Username" required>
+                        <button class="submitbutton">Submit</button> 
+                        </div>
+                    </div>
+                <div class="table">
+                <table class="center" border = "border">
+                    <tr>
+                        <th> Fruit </th>
+                        <th> Price </th>
+                        <th> Quantity </th>
+                    </tr>    
+                    <tr>
+                        <th> Apple </th>
+                        <td> $0.69 </td>
+                        <td> <input type="text" id="apple" size="2" /> </td>
+                    </tr>
+                    <tr>
+                        <th> Orange </th>
+                        <td> $0.59 </td>
+                        <td> <input type="text" id="orange" size="2" /> </td>
+                    </tr> 
+                    <tr>
+                        <th> Banana </th>
+                        <td> $0.39 </td>
+                        <td> <input type="text" id="banana" size="2" /></td>
+                    </tr>
+                </table>
+                <div class="total">
+                    <button class="totalcost" onclick="computeCost()">Total Cost</button>
+                    <input type="text" size="5" id="total" onfocus ="this.blur()" />
+                </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <script type=text/javascript>
+            function computeCost(){
+                var var1 = parseInt(document.getElementById('apple').value);
+                var var2 = parseInt(document.getElementById('orange').value);
+                var var3 = parseInt(document.getElementById('banana').value);
+                return var1*0.69 + var2*0.59 + var3*0.39;
+            }
+        </script>
+    </body>
+    <br><br><br><br>
+    <footer>By Laurensia Anjani <br> CZ3006 - Assignment 2</footer>
+</html>
